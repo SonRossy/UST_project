@@ -9,10 +9,10 @@
  * @author tristesse08
  */
 public class Employee {
-    private String name;
+    protected String name;
     private int employeeId;
     private double salary;
-    private String payRate;
+    String payRate;
     private String joinDate;
     private String typeOfEmployee;
     private int hours;
@@ -37,5 +37,19 @@ public class Employee {
     
     public String toString(){
         return("Name: "+this.name+"\n"+"employee Id: "+this.employeeId+"\n"+"salary: "+this.salary+"\n"+"pay Rate: "+this.payRate+"\n"+" Join Date"+this.joinDate+"\n"+"Employee Type: "+this.typeOfEmployee+"\n"+"Hours: "+this.hours);
+    }
+    void compareSalary(Employee current){
+        if(this.salary>current.salary){
+            System.out.println(this.name +" has more money than "+current.name);
+        }
+    }
+    
+    boolean isSalaryHiger(Employee current){
+        if(this.salary>current.salary){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
